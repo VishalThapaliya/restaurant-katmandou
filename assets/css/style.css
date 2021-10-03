@@ -444,6 +444,10 @@ img{
   margin-right: var(--mb-2);
 }
 
+img.tripadvisor-icon {
+  width: 13%;
+}
+
 .footer__title{
   font-size: var(--h2-font-size);
   color: var(--title-color);

@@ -107,6 +107,11 @@ img{
   height: auto;
 }
 
+.margin-block-1 {
+  margin-block: 1rem;
+}
+
+
 /*========== CLASS CSS ==========*/
 .section{
   padding: 4rem 0 2rem;

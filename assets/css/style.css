@@ -294,6 +294,22 @@ img{
   background-color: var(--first-color-alt);
 }
 
+/*========== INTRODUCTION ==========*/
+.introduction {
+  padding-top: 0 !important;
+}
+
+.introduction__data{
+  text-align: center;
+}
+
+/*========== PRESENTATION ==========*/
+.presentation__data {
+  margin-block-start: 2rem;
+  text-align: justify;
+}
+
+
 /*========== ABOUT ==========*/
 .about__data{
   text-align: center;

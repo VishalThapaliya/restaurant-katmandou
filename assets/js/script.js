@@ -27,7 +27,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
-  const scrollY = window.pageYOffset
+  const scrollY = window.pageYOffset;
 
   sections.forEach(current =>{
       const sectionHeight = current.offsetHeight
@@ -99,9 +99,19 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__data, .home__img,
           .about__data, .about__img,
+          .presentation__data, .presentation__img,
           .services__content, .menu__content,
           .app__data, .app__img,
           .contact__data, .contact__button,
           .footer__content`, {
   interval: 200
-})
+});
+
+/*==================== ACTIVE MENU ====================*/
+function activeMenu() {
+  const menu = document.querySelector('.nav__link');
+  menu.addEventListener('click', function() {
+    menu.classList.remove('active-link');
+    this.classList.add('active-link');
+  });
+}

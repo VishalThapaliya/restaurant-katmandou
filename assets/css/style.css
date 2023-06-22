@@ -309,7 +309,9 @@ img{
 }
 
 /*========== PRESENTATION ==========*/
-.presentation__data {
+.presentation__data,
+.carte__data,
+.menu__data {
   margin-block-start: 2rem;
   text-align: justify;
 }
@@ -385,6 +387,9 @@ img{
 }
 
 .menu__price{
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
   text-align: right;
 }
 
@@ -487,6 +492,11 @@ img {vertical-align: middle;}
 
 .active {
   background-color: #717171;
+}
+
+.mySlides img {
+  border-radius: .8rem;
+  box-shadow: 5px 5px 3px 0px rgba(0,0,0,.1);
 }
 
 /* Fading animation */
@@ -625,11 +635,11 @@ img.tripadvisor-icon {
   }
 
   .menu__container{
-    grid-template-columns: repeat(3, 210px);
-    column-gap: 4rem;
+    grid-template-columns: repeat(3, 280px);
+    column-gap: 2rem;
   }
   .menu__content{
-    padding: 1.25rem;
+    padding: 2rem;
   }
   .menu__img{
     width: 130px;
@@ -648,6 +658,17 @@ img.tripadvisor-icon {
 
   .home__img{
     width: 500px;
+  }
+
+  .galarie__img{
+    width: 400px;
+    border-radius: .75rem;
+  }
+
+  .presentation__img,
+  .menu__img{
+    width: 350px;
+    border-radius: 50%;
   }
 
   .about__container,

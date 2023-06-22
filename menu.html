@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="./assets/img/logo.png">
+        <title>Menu | Restaurant Katmandou</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="index.html" class="nav__logo">
+                  <img src="./assets/img/logo.png" alt="logo"> Katmandou
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">Accueil</a></li>
+                        <li class="nav__item"><a href="presentation.html" class="nav__link">Présentation</a></li>
+                        <li class="nav__item"><a href="galerie.html" class="nav__link">Galerie</a></li>
+                        <li class="nav__item"><a href="carte.html" class="nav__link">Carte</a></li>
+                        <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Réservation</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">Menu du</h1>
+                        <h2 class="home__subtitle">Restaurant KATMANDOU <br> a Grenoble</h2>
+                    </div>
+    
+                    <img src="./assets/img/menu.png" alt="" class="menu__img">
+                </div>
+            </section>
+            
+            <!--========== ABOUT ==========-->
+            <section class="about section bd-container" id="presentation">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">Carte du restaurant népalais tibétain Katmandou à Grenoble</span>
+                        <p class="about__description">
+                            Au restaurant Katmandou, à Grenoble divers menus népalais tibétains sont disponibles, appétissants et à prix abordables. Plusieurs panachages sont possibles.
+                            <br>
+                            Le thali népalais est le plat national par excellence. Plusieurs petits plats sont disposés au sein d'une même assiette. Equilibré et copieux, vous serez rassasié. Le thali est composé de viande de poulet, de bœuf ou d'agneau, et de légumes. Le daal bhaat est une soupe épicée à base de lentilles avec du riz blanc, il se savoure à tout heure de la journée. Au Katmandou, nous vous proposons un népali thali (dhaal baat tarkari) et un népali thali végétarien.
+                        </p>
+                    </div>
+
+                    <img src="./assets/img/about.png" alt="" class="about__img">
+                </div>
+
+                <div class="menu__data">
+                    <p>
+                        Saviez-vous que les lentilles vous fournissent un apport nutritionnel plutôt favorable. Ces légumineuses présentent un indice glycémique faible, riche en fibres et en vitamines B, et enfin leur teneur en antioxydants favorise la réduction des triglycérides. Voilà plus d'une raison d'adopter le thali népalais et le dhaal baat.
+                        <br>
+                        Le khir est un dessert à base de riz, avec du lait préparé à la façon népalaise. Il fait partie intégrante des fêtes et des cérémonies, on le retrouve à toutes les occasions. Pour la préparation du khir, le riz est cuit dans le lait, on y rajoute du beurre clarifié, de la cardamome pour parfumer ,des raisins pour le goût sucré et des cajou pour un peu de croquant.
+                        <br>
+                        Le menu végétarien est composé de momos,(raviolis cuits à la vapeur), de pakora (petits beignets frits)ou de dhaal soupe(soupe aux lentilles).Le plat principal est un jogi tarkari cuisiné avec des petits légumes par le chef.
+                        <br>
+                        Le menu Annapurna est composé de beignets de pommes de terre et de beignets de pois chiche ou de blancs de poulet marinés aux épices "kukhurako sekuwa",ou d'une soupe à base de légumes, de nouilles, et de viande de mouton, le thenthuk. Pour le menu Yak ou Yeti vous aurez le choix entre une soupe aux lentilles ou la soupe du jour, ou des momos au poulet ou encore un khasiko sekuwa. Le menu Sagarmatha propose un assortiment de légumes, des momos, et des grillades. Tous nos menus sont servis avec du riz nature et un naan.
+                    </p>
+                </div>
+
+
+                <div class="menu section bd-container" id="menu">
+                    <div class="margin-block-1">
+                        <span class="section-subtitle">NOS MENUS</span>
+    
+                        <div class="menu__container bd-grid">
+                            <div class="menu__content">
+                                <img src="./assets/img/plate1.png" alt="" class="menu__img">
+                                <h3 class="menu__name">
+                                    NEPALI THALI 
+                                    <p>(DAAL BHAT TARKARI)</p>
+                                </h3>
+                                <span class="menu__detail">
+                                    Jogi Takari, Khasiko Massu ou Kukhurako Massu, Daal Soupe, 
+                                    Alooko Achar (Salade de pommes de terre aux oignons crus, concombre, sésame noir et citron),
+                                    Riz nature et Naan au choix, Dessert au choix    
+                                </span>
+                                <span class="menu__price">21.00&euro;</span>
+                            </div>
+
+                            <div class="menu__content">
+                                <img src="./assets/img/plate2.png" alt="" class="menu__img">
+                                <h3 class="menu__name">NEPALI THALI VEGETARIAN</h3>
+                                <span class="menu__detail">
+                                    Jogi Takari (Curry de legumes), Daal Soupe, Alooko Achar, Beignets,
+                                    Riz nature et Naan au fromage ou nan à l'ail ou nature, Dessert au choix
+                                </span>
+                                <span class="menu__price">20.00&euro;</span>
+                            </div>
+
+                            <div class="menu__content">
+                                <img src="./assets/img/plate3.png" alt="" class="menu__img">
+                                <h3 class="menu__name">MENU VEGETARIAN</h3>
+                                <p class="menu__detail">
+                                    Entrée au choix : Momos aux légumes ou Pakora (Beignets de légumes) ou Daal Soupe
+                                </p>
+
+                                <p class="menu__detail">
+                                    Plat : Jogi Tarkari accompagné d'une petite salade de pomme de terre. Servi avec Riz nature et naan au fromage ou à l'ail ou nature
+                                </p>
+
+                                <p class="menu__detail">
+                                    Dessert au choix
+                                </p>
+                                <span class="menu__price">20.00&euro;</span>
+                            </div>
+
+                            <div class="menu__content">
+                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
+                                <h3 class="menu__name">MENU ANNAPURNA</h3>
+                                <p class="menu__detail">Entrée au choix : Aloo Chop et Pakora ou Kukhurako Sékuwa</p>
+                                <p class="menu__detail">Plat au choix : Kukhurako Massu ou Piro Kukhurako Massu</p>
+                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
+                                <p class="menu__detail">Dessert au choix</p>
+                                <span class="menu__price">22.00&euro;</span>
+                            </div>
+
+                            <div class="menu__content">
+                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
+                                <h3 class="menu__name">MENU YAK ou YETI</h3>
+                                <p class="menu__detail">Entrée au choix : Daal Soupe ou Momos au poulet ou Momos mélangés ou Pakora ou Allo Chop</p>
+                                <p class="menu__detail">Plat au choix : Chowmenin veges ou Kukhurako Massu ou Piro kukhurako massu ou Khasiko Massu</p>
+                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
+                                <p class="menu__detail">Dessert au choix</p>
+                                <span class="menu__price">24.00&euro;</span>
+                            </div>
+
+                            <div class="menu__content">
+                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
+                                <h3 class="menu__name">MENU SATKAR</h3>
+                                <p class="menu__detail">Entrée au choix : Machhako Sékuwa ou Kukhurako sékuwa ou momos au choix plus pakora</p>
+                                <p class="menu__detail">Plat au choix : Tass ou Kukhurako Massu ou Piro Kukhurako Massu ou Khasiko Massu ou Katmandou Royal Poulet</p>
+                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
+                                <p class="menu__detail">Dessert au choix</p>
+                                
+                                <span class="menu__price">27.00&euro;</span>
+                            </div>
+
+                            <div class="menu__content">
+                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
+                                <h3 class="menu__name">MENU SAGARMATHA (MENU DECOUVERTE)</h3>
+                                <p class="menu__detail">Entrée : Assortiments de beignets des légumes, des momos et de Sékuwa (grillades) et potage chaud</p>
+                                <p class="menu__detail">Plat : Jogi Tarkari, Khasiko Massu, Kukhurako Massu et Alooko Achar</p>
+                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
+                                <p class="menu__detail">Dessert au choix</p>
+                                <p class="menu__detail">Café ou Infusion</p>
+                                <span class="menu__price">28.50&euro;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="index.html" class="footer__logo">Restaurant KATMANDOU</a>
+                    <span class="footer__description">Restaurant</span>
+                    <div>
+                        <a href="https://www.facebook.com/Restaurant-le-Katmandou-194011374042844" class="footer__social" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g187264-d2666359-Reviews-Katmandou-Grenoble_Isere_Auvergne_Rhone_Alpes.html" class="footer__social" target="_blank">
+                            <img src="./assets/img/tripadvisor-icon.svg" class="tripadvisor-icon" alt="tripadvisor">
+                        </a>
+                        <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Livraison</a></li>
+                        <li><a href="#" class="footer__link">Cuisine Népalaise Tibétaine</a></li>
+                        <li><a href="#" class="footer__link">Plats à emporter</a></li>
+                        <li><a href="#" class="footer__link">Réservez</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Événement</a></li>
+                        <li><a href="#" class="footer__link">Contactez-nous</a></li>
+                        <li><a href="#" class="footer__link">Politique de confidentialité</a></li>
+                        <li><a href="#" class="footer__link">Conditions de services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Adress</h3>
+                    <ul>
+                        <li>4 Rue Condorcet</li>
+                        <li>38000 Grenoble</li>
+                        <li>09 54 71 40 26</li>
+                        <li>contact@katmandou-restaurant-grenoble.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; <script>document.write(new Date().getFullYear());</script> Restaurant Katmandou. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

@@ -10,7 +10,31 @@
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="icon" type="image/png" href="./assets/img/logo.png">
-        <title>Menu | Restaurant Katmandou</title>
+        <title>Réservation | Restaurant Katmandou</title>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('mXWNpPxlerVrqVdkt');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_23grsnr', 'template_j0pm0om', '#contact-form')
+                        .then(function(response) {
+                            console.log('SUCCESS!', response.status, response.text);
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
     </head>
     <body>
 
@@ -34,7 +58,7 @@
                         <li class="nav__item"><a href="carte.html" class="nav__link">Carte</a></li>
                         <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
                         <li class="nav__item"><a href="reservation.html" class="nav__link">Réservation</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
 
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                     </ul>
@@ -177,6 +201,22 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <label>Name</label>
+                    <input type="text" name="user_name">
+                    <label>Email</label>
+                    <input type="email" name="user_email">
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+
+
             </section>
         </main>
 

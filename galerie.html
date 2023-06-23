@@ -33,7 +33,7 @@
                         <li class="nav__item"><a href="galerie.html" class="nav__link">Galerie</a></li>
                         <li class="nav__item"><a href="carte.html" class="nav__link">Carte</a></li>
                         <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Réservation</a></li>
+                        <li class="nav__item"><a href="reservation.html" class="nav__link">Réservation</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
 
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
@@ -156,5 +156,28 @@
 
         <!--========== MAIN JS ==========-->
         <script src="assets/js/script.js"></script>
+
+        <!--============ IMAGE SLIDER =============-->
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+        </script>
     </body>
 </html>

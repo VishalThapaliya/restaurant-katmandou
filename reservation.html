@@ -21,14 +21,16 @@
         </script>
         <script type="text/javascript">
             window.onload = function() {
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                const contactForm = document.getElementById('contact-form');
+                contactForm.addEventListener('submit', function(event) {
                     event.preventDefault();
-                    // generate a five digit number for the contact_number variable
-                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // generate a five digit number for the user_contact variable
+                    //this.user_contact.value = Math.random() * 100000 | 0;
                     // these IDs from the previous steps
                     emailjs.sendForm('service_23grsnr', 'template_j0pm0om', '#contact-form')
                         .then(function(response) {
                             console.log('SUCCESS!', response.status, response.text);
+                            contactForm.reset();
                         }, function(error) {
                             console.log('FAILED...', error);
                         });
@@ -75,7 +77,7 @@
             <section class="home" id="home">
                 <div class="home__container bd-container bd-grid">
                     <div class="home__data">
-                        <h1 class="home__title">Menu du</h1>
+                        <h1 class="home__title">Réservez au</h1>
                         <h2 class="home__subtitle">Restaurant KATMANDOU <br> a Grenoble</h2>
                     </div>
     
@@ -85,138 +87,57 @@
             
             <!--========== ABOUT ==========-->
             <section class="about section bd-container" id="presentation">
-                <div class="about__container  bd-grid">
-                    <div class="about__data">
-                        <span class="section-subtitle about__initial">Carte du restaurant népalais tibétain Katmandou à Grenoble</span>
-                        <p class="about__description">
-                            Au restaurant Katmandou, à Grenoble divers menus népalais tibétains sont disponibles, appétissants et à prix abordables. Plusieurs panachages sont possibles.
-                            <br>
-                            Le thali népalais est le plat national par excellence. Plusieurs petits plats sont disposés au sein d'une même assiette. Equilibré et copieux, vous serez rassasié. Le thali est composé de viande de poulet, de bœuf ou d'agneau, et de légumes. Le daal bhaat est une soupe épicée à base de lentilles avec du riz blanc, il se savoure à tout heure de la journée. Au Katmandou, nous vous proposons un népali thali (dhaal baat tarkari) et un népali thali végétarien.
-                        </p>
-                    </div>
+                <div class="reservation__data">
+                    <h3>
+                        Formulaire de réservation Katmandou
+                    </h3>
 
-                    <img src="./assets/img/about.png" alt="" class="about__img">
-                </div>
-
-                <div class="menu__data">
-                    <p>
-                        Saviez-vous que les lentilles vous fournissent un apport nutritionnel plutôt favorable. Ces légumineuses présentent un indice glycémique faible, riche en fibres et en vitamines B, et enfin leur teneur en antioxydants favorise la réduction des triglycérides. Voilà plus d'une raison d'adopter le thali népalais et le dhaal baat.
-                        <br>
-                        Le khir est un dessert à base de riz, avec du lait préparé à la façon népalaise. Il fait partie intégrante des fêtes et des cérémonies, on le retrouve à toutes les occasions. Pour la préparation du khir, le riz est cuit dans le lait, on y rajoute du beurre clarifié, de la cardamome pour parfumer ,des raisins pour le goût sucré et des cajou pour un peu de croquant.
-                        <br>
-                        Le menu végétarien est composé de momos,(raviolis cuits à la vapeur), de pakora (petits beignets frits)ou de dhaal soupe(soupe aux lentilles).Le plat principal est un jogi tarkari cuisiné avec des petits légumes par le chef.
-                        <br>
-                        Le menu Annapurna est composé de beignets de pommes de terre et de beignets de pois chiche ou de blancs de poulet marinés aux épices "kukhurako sekuwa",ou d'une soupe à base de légumes, de nouilles, et de viande de mouton, le thenthuk. Pour le menu Yak ou Yeti vous aurez le choix entre une soupe aux lentilles ou la soupe du jour, ou des momos au poulet ou encore un khasiko sekuwa. Le menu Sagarmatha propose un assortiment de légumes, des momos, et des grillades. Tous nos menus sont servis avec du riz nature et un naan.
-                    </p>
-                </div>
-
-
-                <div class="menu section bd-container" id="menu">
-                    <div class="margin-block-1">
-                        <span class="section-subtitle">NOS MENUS</span>
-    
-                        <div class="menu__container bd-grid">
-                            <div class="menu__content">
-                                <img src="./assets/img/plate1.png" alt="" class="menu__img">
-                                <h3 class="menu__name">
-                                    NEPALI THALI 
-                                    <p>(DAAL BHAT TARKARI)</p>
-                                </h3>
-                                <span class="menu__detail">
-                                    Jogi Takari, Khasiko Massu ou Kukhurako Massu, Daal Soupe, 
-                                    Alooko Achar (Salade de pommes de terre aux oignons crus, concombre, sésame noir et citron),
-                                    Riz nature et Naan au choix, Dessert au choix    
-                                </span>
-                                <span class="menu__price">21.00&euro;</span>
-                            </div>
-
-                            <div class="menu__content">
-                                <img src="./assets/img/plate2.png" alt="" class="menu__img">
-                                <h3 class="menu__name">NEPALI THALI VEGETARIAN</h3>
-                                <span class="menu__detail">
-                                    Jogi Takari (Curry de legumes), Daal Soupe, Alooko Achar, Beignets,
-                                    Riz nature et Naan au fromage ou nan à l'ail ou nature, Dessert au choix
-                                </span>
-                                <span class="menu__price">20.00&euro;</span>
-                            </div>
-
-                            <div class="menu__content">
-                                <img src="./assets/img/plate3.png" alt="" class="menu__img">
-                                <h3 class="menu__name">MENU VEGETARIAN</h3>
-                                <p class="menu__detail">
-                                    Entrée au choix : Momos aux légumes ou Pakora (Beignets de légumes) ou Daal Soupe
-                                </p>
-
-                                <p class="menu__detail">
-                                    Plat : Jogi Tarkari accompagné d'une petite salade de pomme de terre. Servi avec Riz nature et naan au fromage ou à l'ail ou nature
-                                </p>
-
-                                <p class="menu__detail">
-                                    Dessert au choix
-                                </p>
-                                <span class="menu__price">20.00&euro;</span>
-                            </div>
-
-                            <div class="menu__content">
-                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
-                                <h3 class="menu__name">MENU ANNAPURNA</h3>
-                                <p class="menu__detail">Entrée au choix : Aloo Chop et Pakora ou Kukhurako Sékuwa</p>
-                                <p class="menu__detail">Plat au choix : Kukhurako Massu ou Piro Kukhurako Massu</p>
-                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
-                                <p class="menu__detail">Dessert au choix</p>
-                                <span class="menu__price">22.00&euro;</span>
-                            </div>
-
-                            <div class="menu__content">
-                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
-                                <h3 class="menu__name">MENU YAK ou YETI</h3>
-                                <p class="menu__detail">Entrée au choix : Daal Soupe ou Momos au poulet ou Momos mélangés ou Pakora ou Allo Chop</p>
-                                <p class="menu__detail">Plat au choix : Chowmenin veges ou Kukhurako Massu ou Piro kukhurako massu ou Khasiko Massu</p>
-                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
-                                <p class="menu__detail">Dessert au choix</p>
-                                <span class="menu__price">24.00&euro;</span>
-                            </div>
-
-                            <div class="menu__content">
-                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
-                                <h3 class="menu__name">MENU SATKAR</h3>
-                                <p class="menu__detail">Entrée au choix : Machhako Sékuwa ou Kukhurako sékuwa ou momos au choix plus pakora</p>
-                                <p class="menu__detail">Plat au choix : Tass ou Kukhurako Massu ou Piro Kukhurako Massu ou Khasiko Massu ou Katmandou Royal Poulet</p>
-                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
-                                <p class="menu__detail">Dessert au choix</p>
+                    <div class="reservation__container">
+                        <form id="contact-form" class="contact__form">
+                            <div class="form-content">
+                                <div>
+                                    <label>Nom*</label>
+                                    <input type="text" name="user_name" required/>
+                                </div>
                                 
-                                <span class="menu__price">27.00&euro;</span>
+                                <div>
+                                    <label>Adresse Email*</label>
+                                    <input type="email" name="user_email" required/>
+                                </div>
+                                
+                                <div>
+                                    <label>Téléphone*</label>
+                                    <input type="tel" name="user_contact" required/>
+                                </div>
                             </div>
+    
+                            <div class="form-content">
+                                <div>
+                                    <label>Date de réservation*</label>
+                                    <input type="date" name="reservation_date" required/>
+                                </div>
+                                
+                                <div>
+                                    <label>Nombre de personne*</label>
+                                    <input type="number" name="personne" min="1" max="12" required/>
+                                </div>
+                                
+                                <div>
+                                    <label>Heure d'arrivée*</label>
+                                    <input type="time" name="heure_arivee" required/>
+                                </div>
+                            </div>
+    
+                            <div class="form-content-message">
+                                <label>Sujet</label>
+                                <textarea name="message" rows="4" cols="50"></textarea>
+                            </div>
+                            <input type="submit" value="Envoyez">
+                        </form>
 
-                            <div class="menu__content">
-                                <img src="./assets/img/plate4.png" alt="" class="menu__img">
-                                <h3 class="menu__name">MENU SAGARMATHA (MENU DECOUVERTE)</h3>
-                                <p class="menu__detail">Entrée : Assortiments de beignets des légumes, des momos et de Sékuwa (grillades) et potage chaud</p>
-                                <p class="menu__detail">Plat : Jogi Tarkari, Khasiko Massu, Kukhurako Massu et Alooko Achar</p>
-                                <p class="menu__detail">Servi avec Riz nature et Naan au choix</p>
-                                <p class="menu__detail">Dessert au choix</p>
-                                <p class="menu__detail">Café ou Infusion</p>
-                                <span class="menu__price">28.50&euro;</span>
-                            </div>
-                        </div>
+                        <!-- <aside>something</aside> -->
                     </div>
                 </div>
-
-
-
-
-                <form id="contact-form">
-                    <input type="hidden" name="contact_number">
-                    <label>Name</label>
-                    <input type="text" name="user_name">
-                    <label>Email</label>
-                    <input type="email" name="user_email">
-                    <label>Message</label>
-                    <textarea name="message"></textarea>
-                    <input type="submit" value="Send">
-                </form>
-
-
             </section>
         </main>
 

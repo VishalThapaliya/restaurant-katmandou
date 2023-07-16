@@ -311,7 +311,8 @@ img{
 /*========== PRESENTATION ==========*/
 .presentation__data,
 .carte__data,
-.menu__data {
+.menu__data,
+.reservation__data {
   margin-block-start: 2rem;
   text-align: justify;
 }
@@ -682,4 +683,61 @@ img.tripadvisor-icon {
     .home__container {
         height: 640px;
     }
+}
+
+/*========== Reservation form ==========*/
+
+.reservation__container {
+  display: flex;
+}
+
+.contact__form {
+  padding: 1rem;
+  flex: 2;
+  box-shadow: 2px 5px 5px 4px rgba(59, 59, 59, 0.1);
+  border-radius: 0.5rem;
+}
+
+.reservation__container aside {
+  flex: 1;
+  padding: 1rem;
+}
+
+.form-content,
+.form-content div {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.25rem;
+}
+
+.form-content {
+  padding-block: 0.25rem;
+}
+
+.form-content div {
+  flex-direction: column;
+}
+
+.form-content div input,
+.form-content-message textarea {
+  font-family: var(--body-font);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #c2c2c2;
+}
+
+.form-content-message {
+  display: flex;
+  flex-direction: column;
+  padding-block: 0.25rem;
+}
+
+.contact__form input[type="submit"] {
+  padding: 0.75rem;
+  outline: none;
+  border: 0;
+  font-size: var(--small-font-size);
+  background: var(--first-color);
+  border-radius: 0.25rem;
+  color: var(--body-color);
 }

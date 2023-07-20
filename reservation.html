@@ -22,6 +22,7 @@
         <script type="text/javascript">
             window.onload = function() {
                 const contactForm = document.getElementById('contact-form');
+                const confirmationMessage = document.getElementById('confirmation');
                 contactForm.addEventListener('submit', function(event) {
                     event.preventDefault();
                     // generate a five digit number for the user_contact variable
@@ -30,11 +31,16 @@
                     emailjs.sendForm('service_23grsnr', 'template_j0pm0om', '#contact-form')
                         .then(function(response) {
                             console.log('SUCCESS!', response.status, response.text);
+                            confirmationMessage.style.display = 'block';
                             contactForm.reset();
                         }, function(error) {
                             console.log('FAILED...', error);
                         });
                 });
+            }
+
+            function hideConfirmationOverlay() {
+                document.getElementById("confirmation").style.display = "none";
             }
         </script>
     </head>
@@ -92,6 +98,12 @@
                         Formulaire de réservation Katmandou
                     </h3>
 
+                    <div id="confirmation" onclick="hideConfirmationOverlay()">
+                        <p id="confirmation-message">
+                            Votre demande a été enregistrée avec succès. Vous serez bientôt contacté par nous concernant votre confirmation.
+                        </p>
+                    </div>
+
                     <div class="reservation__container">
                         <form id="contact-form" class="contact__form">
                             <div class="form-content">
@@ -135,7 +147,26 @@
                             <input type="submit" value="Envoyez">
                         </form>
 
-                        <!-- <aside>something</aside> -->
+                        <aside class="contact__data">
+                            <div>
+                                <h3>Visiter Nous</h3>
+                                <p>Pour toute demande d'information contacter nous. Vous serez la bienvenue dans notre restaurant.</p>
+                            </div>
+                            <hr />
+                            <div>
+                                <p><strong>Adresse:</strong> 4 Rue Condorcet</p>
+                                <p>38000 Grenoble</p>
+
+                                <p><strong>Tél:</strong> 09 54 71 40 26</p>
+                                <p><strong>E-mail:</strong> contact@katmandou-restaurant-grenoble.com</p>
+                                </p>
+                            </div>
+                            <hr />
+                            <div>
+                                Heure d'ouverture
+                                <p><strong>Lundi au Samedi:</strong> 12h00 à 14h00 et de 19h00 à 22h00 </p>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </section>

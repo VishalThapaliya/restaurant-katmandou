@@ -689,6 +689,7 @@ img.tripadvisor-icon {
 
 .reservation__container {
   display: flex;
+  gap: 1rem;
 }
 
 #confirmation {

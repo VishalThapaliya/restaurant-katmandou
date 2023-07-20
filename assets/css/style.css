@@ -714,6 +714,12 @@ img.tripadvisor-icon {
   padding-block: 0.25rem;
 }
 
+@media screen and (max-width: 767px) {
+  .form-content {
+    flex-direction: column;
+  }
+}
+
 .form-content div {
   flex-direction: column;
 }
